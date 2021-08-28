@@ -1,0 +1,38 @@
+$breakpoints: (
+    "mobile": (
+        max-width: 480,
+    ),
+    "tablet": (
+        max-width: 768,
+    ),
+    "laptop": (
+        max-width: 1024,
+    ),
+    "desktop": (
+        min-width: 1200px,
+    ),
+);
+
+@mixin respond-to($breakpoint) {
+    $raw-query: map-get($brekapoints, $breakpoint);
+
+    @if $raw-query {
+        $query: if(type-of($raw-query) == "string", unquote($raw-query), inspect($raw-query));
+
+        @media #{$query} {
+            @content;
+        }
+    } @else {
+        @error '404 Not found: `#{$breakpoint}`.';
+    }
+}
+
+//-----------------------------------------
+//  USAGE
+//-----------------------------------------
+// .button {
+//     color: white;
+//     @include respond-to('tablet') {
+//         color: black;
+//     }
+// }
