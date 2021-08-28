@@ -1,48 +1,7 @@
-//-----------------------------------------
-//  ABSTRACT
-//-----------------------------------------
-@import
-    'abstract/variables',
-    'abstract/functions',
-    'abstract/mixins.scss',
-    'abstract/placeholders';
-
-//-----------------------------------------
-//  BASE
-//-----------------------------------------
-@import
-    'base/base',
-    'base/animation',
-    'base/typography',
-    'base/utilities';
-
-//-----------------------------------------
-//  LAYOUT
-//-----------------------------------------
-@import
-    'layout/navigation',
-    'layout/header',
-    'layout/footer',
-    'layout/forms';
-
-//-----------------------------------------
-//  COMPONENTS
-//-----------------------------------------
-@import
-    'components/buttons',
-    'components/dropdown',
-    'components/form';
-
-//-----------------------------------------
-//  THEMES
-//-----------------------------------------
-@import 
-    'themes/theme',
-    'themes/light';
-    
-//-----------------------------------------
-//  PAGES
-//-----------------------------------------
-@import 
-    'pages/home',
-    'pages/contact';
+@use 'abstract';
+@use 'base';
+@use 'components';
+@use 'fonts';
+@use 'layout';
+@use 'pages';
+@use 'themes';
