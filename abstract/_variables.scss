@@ -6,17 +6,18 @@ $black: #080808;
 $white: #fcfcfc;
 
 // Fonts
-$fontBody: 'Montserrat';
-$fontBodyFallback: 'sans-serif';
-$fontHeading: 'Montserrat';
-$fontFaceUrl: 'scss/font/Montserrat-Thin.ttf';
+$font_body: 'Montserrat';
+$font_body_fallback: 'sans-serif';
+$font_heading: 'Montserrat';
+$font_heading_fallback: 'Montserrat';
+$font_face_url: 'scss/font/Montserrat-Thin.ttf';
 
 // Fluid typography
-$min_width: 480px;
-$max_width: 1440px;
+$font_size: 14px;
 $min_font: 12px;
 $max_font: 18px;
-$pref_font: 14px;
+$min_width: 480px;
+$max_width: 1440px;
 
 // Padding
 $padding: (
@@ -31,8 +32,9 @@ $padding: (
 	black: $black;
 	white: $white;
 	error: $error;
-	fontBody: $fontBody;
-	fontBodyFallback: $fontBodyFallback;
-	fontHeading: $fontHeading;
-	fontFaceUrl: $fontFaceUrl;
+	font_body: $font_body;
+	font_body_fallback: $font_body_fallback;
+	font_heading: $font_heading;
+	font_heading_fallback: $font_body_fallback;
+	font_face_url: $font_face_url;
 }

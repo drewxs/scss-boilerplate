@@ -1,7 +1,7 @@
 @use '../abstract/variables' as *;
 
 @font-face {
-	font-family: $fontBody;
-	src: url($fontFaceUrl) format('truetype');
+	font-family: $font_body;
+	src: url($font_face_url) format('truetype');
 	font-display: swap;
 }

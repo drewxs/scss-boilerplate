@@ -1,7 +1,7 @@
 @use '../abstract' as *;
 
 html {
-	font-family: $fontBody, $fontBodyFallback;
+	font-family: $font_body, $font_body_fallback;
 	color: $black;
 	font-smooth: always;
 	text-rendering: optimizeLegibility;
@@ -10,12 +10,12 @@ html {
 
 	@include fluid-type($min_width, $max_width, $min_font, $max_font);
 	@include respond-to('desktop') {
-		font-size: $pref_font;
+		font-size: $font_size;
 	}
 }
 
 @include headings {
-	font-family: $fontHeading, $fontBodyFallback;
+	font-family: $font_heading, $font_body_fallback;
 	font-weight: 500;
 	margin-bottom: 0.2rem;
 }
