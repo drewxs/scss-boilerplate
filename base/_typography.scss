@@ -1,60 +1,56 @@
-body {
-	font-size: var(--fs-400);
-	font-family: 'Montserrat', sans-serif;
-	color: var(--clr-neutral-900);
-	letter-spacing: -0.5px;
+@use '../abstract' as *;
+
+html {
+	font-family: $fontBody, $fontBodyFallback;
+	color: $black;
+	font-smooth: always;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	@include fluid-type($min_width, $max_width, $min_font, $max_font);
+	@include respond-to('desktop') {
+		font-size: $pref_font;
+	}
 }
 
-h1,
-h2,
-h3,
-h4 {
-	--font-weight: 700;
-	--font-width: 80;
-	font-weight: normal;
-	font-stretch: 100%;
-	line-height: 1.1;
-	color: var(--clr-neutral-800);
+@include headings {
+	font-family: $fontHeading, $fontBodyFallback;
+	font-weight: 500;
+	margin-bottom: 0.2rem;
 }
 
 h1,
 .h1 {
-	--font-weight: 900;
-	font-size: --fs-800;
+	font-size: 3em;
 }
 
 h2,
 .h2 {
-	font-size: --fs-700;
+	font-size: 2em;
 }
 
 h3,
 .h3 {
-	font-size: --fs-600;
+	font-size: 1.75em;
 }
 
 h4,
-.h4 {
-	font-size: --fs-500;
-}
-
+.h4,
 h5,
-.h5 {
-	font-size: --fs-400;
-}
-
+.h5,
 h6,
 .h6 {
-	font-size: --fs-300;
+	font-size: 1.5em;
 }
 
 a {
-	color: var(--clr-primary-400);
+	color: $primary;
+	text-decoration: none;
 
 	&:hover,
 	&:focus {
-		color: var(--clr-primary-500);
-		text-decoration: none;
+		color: rgba($color: $primary, $alpha: 0.5);
 	}
 }
 
@@ -62,4 +58,9 @@ p:not([class]),
 ul:not([class]),
 li:not([class]) {
 	max-width: 60ch;
+}
+
+.error {
+	color: $error;
+	margin-bottom: 1rem;
 }

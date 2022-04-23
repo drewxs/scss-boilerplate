@@ -1,0 +1,38 @@
+// Colors
+$primary: #263238;
+$secondary: #404d5a;
+$error: #e57373;
+$black: #080808;
+$white: #fcfcfc;
+
+// Fonts
+$fontBody: 'Montserrat';
+$fontBodyFallback: 'sans-serif';
+$fontHeading: 'Montserrat';
+$fontFaceUrl: 'scss/font/Montserrat-Thin.ttf';
+
+// Fluid typography
+$min_width: 480px;
+$max_width: 1440px;
+$min_font: 12px;
+$max_font: 18px;
+$pref_font: 14px;
+
+// Padding
+$padding: (
+	small: 1rem,
+	medium: 2rem,
+	large: 3rem,
+);
+
+:export {
+	primary: $primary;
+	secondary: $secondary;
+	black: $black;
+	white: $white;
+	error: $error;
+	fontBody: $fontBody;
+	fontBodyFallback: $fontBodyFallback;
+	fontHeading: $fontHeading;
+	fontFaceUrl: $fontFaceUrl;
+}
